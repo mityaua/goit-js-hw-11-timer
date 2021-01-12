@@ -1,10 +1,3 @@
-import snowf from 'snowf';
-
-snowf.init({
-  size: 5,
-  amount: 50,
-});
-
 // Цифры от таймера в DOM
 const daysRef = document.querySelector('[data-value="days"]');
 const hoursRef = document.querySelector('[data-value="hours"]');
