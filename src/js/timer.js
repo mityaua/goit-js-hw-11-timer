@@ -11,13 +11,13 @@ const timer = {
   start() {
     const targetDate = new Date(2022, 0, 1, 0, 0, 0);
 
-    updateClockface(0);
+    updateTimer(0);
 
     this.intervalId = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = targetDate - currentTime;
 
-      updateClockface(deltaTime);
+      updateTimer(deltaTime);
 
       if (deltaTime <= 0) {
         alert('С Новым годом! 🎄');
@@ -29,7 +29,7 @@ const timer = {
   stop() {
     clearInterval(this.intervalId);
     this.intervalId = null;
-    updateClockface(0);
+    updateTimer(0);
   },
 };
 
@@ -37,7 +37,7 @@ const timer = {
 timer.start();
 
 // Обновляет таймер
-function updateClockface(time) {
+function updateTimer(time) {
   /*
    * Оставшиеся дни: делим значение UTC на 1000 * 60 * 60 * 24, количество
    * миллисекунд в одном дне (миллисекунды * секунды * минуты * часы)
