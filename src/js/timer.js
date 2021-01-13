@@ -18,6 +18,7 @@ class NewTimer {
 
       if (deltaTime <= 0) {
         this.stop();
+        return;
       }
     }, 1000);
   }
