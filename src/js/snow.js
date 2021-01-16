@@ -1,9 +1,6 @@
 import snowf from 'snowf';
 
-snowf.init({
-  size: 5,
-  amount: 50,
-});
+snowf.init();
 
 // Сохраняет пропорции при смене экрана (костыль для бага пакета)
 window.onresize = function () {
