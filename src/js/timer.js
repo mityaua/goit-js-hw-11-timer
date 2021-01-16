@@ -1,3 +1,5 @@
+import showConfetti from './confetti';
+
 // Декларация класса
 class NewTimer {
   constructor({ selector, targetDate, intervalId = null }) {
@@ -60,8 +62,8 @@ class NewTimer {
   // Обновляет контент
   updateTitle() {
     const titleRef = document.querySelector('#title');
-    alert('С Новым годом! 🥳');
     titleRef.textContent = 'Happy New Year 2022! 🥳';
+    setInterval(showConfetti, 2000);
   }
 }
 
